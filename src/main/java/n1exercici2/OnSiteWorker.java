@@ -1,8 +1,9 @@
-package n1exercici1;
+package n1exercici2;
 
-public class OnSiteWorker extends Worker{
+public class OnSiteWorker extends Worker {
     private double kilometerPrize;
     private double kilometers;
+
     public OnSiteWorker(String name, String surname, double hourPrize, double kilometerPrize, double kilometers) {
         super(name, surname, hourPrize);
         this.kilometerPrize = kilometerPrize;
@@ -28,5 +29,10 @@ public class OnSiteWorker extends Worker{
     @Override
     public double calculateSalary(double hours) {
         return (hours * this.getHourPrize()) + (this.kilometers * this.kilometerPrize);
+    }
+
+    @Deprecated
+    public void printKilometers() {
+        System.out.println(this.kilometers);
     }
 }

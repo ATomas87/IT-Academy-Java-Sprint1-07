@@ -1,11 +1,13 @@
-package n1exercici1;
+package n1exercici2;
 
 public class Main {
+    @SuppressWarnings("deprecation")
     public static void main(String[] args) {
+
         OnSiteWorker onSiteWorker = new OnSiteWorker("Antonio", "Tomás", 10, 0.10, 15);
         OnLineWorker onLineWorker = new OnLineWorker("Benito", "Martínez", 10);
 
-        System.out.println(onSiteWorker.calculateSalary(162));
-        System.out.println(onLineWorker.calculateSalary(162));
+        onSiteWorker.printKilometers();
+        onLineWorker.printName();
     }
 }
